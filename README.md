@@ -1,5 +1,5 @@
 # Android device tree for Xiaomi Mi9 Pro 5G (crux)
-
+Tree from from Flower-Studio
 ```
 #
 # Copyright (C) 2023 The Android Open Source Project
