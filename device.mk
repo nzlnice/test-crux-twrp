@@ -28,13 +28,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1 \
     android.hardware.boot@1.1.recovery
 
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# EROFS-utils
-PRODUCT_PACKAGES += \
-    erofs-utils
-
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_DEVICE_MODULES += libion vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti
