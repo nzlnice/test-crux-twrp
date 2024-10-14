@@ -18,17 +18,20 @@
 # DTBO
 /dtbo            emmc     /dev/block/bootdevice/by-name/dtbo                             flags=display="DTBO";backup=1;flashimg=1
 
+#system_root
+/system_root     ext4     /dev/block/bootdevice/by-name/system       flags=backup=1;wipeingui
+
 # System Partitions
-/system		     ext4     system                                                         flags=display="System";logical
-/system		     erofs    system                                                         flags=display="System";logical
-/vendor		     ext4     vendor                                                         flags=display="Vendor";logical
-/vendor		     erofs    vendor                                                         flags=display="Vendor";logical
-/product	     ext4     product                                                        flags=display="Product";logical
-/product	     erofs    product                                                        flags=display="Product";logical
-/system_ext	     ext4     system_ext                                                     flags=display="System_EXT";logical
-/system_ext	     erofs    system_ext                                                     flags=display="System_EXT";logical
-/odm		     ext4     odm                                                            flags=display="ODM";logical
-/odm		     erofs    odm                                                            flags=display="ODM";logical
+/system		 ext4     /dev/block/bootdevice/by-name/system                                                         flags=display="System";logical
+/system		 erofs    /dev/block/bootdevice/by-name/system                                                         flags=display="System";logical
+/vendor		 ext4     /dev/block/bootdevice/by-name/vendor                                                         flags=display="Vendor";logical
+/vendor		 erofs    /dev/block/bootdevice/by-name/vendor                                                         flags=display="Vendor";logical
+/product	 ext4     /dev/block/bootdevice/by-name/product                                                        flags=display="Product";logical
+/product	 erofs    /dev/block/bootdevice/by-name/product                                                        flags=display="Product";logical
+/system_ext	 ext4     /dev/block/bootdevice/by-name/system_ext                                                     flags=display="System_EXT";logical
+/system_ext	 erofs    /dev/block/bootdevice/by-name/system_ext                                                     flags=display="System_EXT";logical
+/odm		 ext4     /dev/block/bootdevice/by-name/odm                                                            flags=display="ODM";logical
+/odm		 erofs    /dev/block/bootdevice/by-name/odm                                                            flags=display="ODM";logical
 
 # System Partitions (Image)
 /system_image    emmc     /dev/block/bootdevice/by-name/system                           flags=backup=1;flashimg=1
