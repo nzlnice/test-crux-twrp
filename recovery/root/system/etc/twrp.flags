@@ -11,6 +11,7 @@
 
 # MetaData
 /metadata        ext4     /dev/block/bootdevice/by-name/metadata                         flags=backup=1;wipeingui
+/data             ext4    /dev/block/bootdevice/by-name/userdata                         flags=fileencryption=ice:aes-256-cts;wrappedkey
 
 # Internal Storage
 /storage         auto     /data/media/0                                                  flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
@@ -19,7 +20,7 @@
 /dtbo            emmc     /dev/block/bootdevice/by-name/dtbo                             flags=display="DTBO";backup=1;flashimg=1
 
 #system_root
-/system_root     ext4     /dev/block/bootdevice/by-name/system       flags=backup=1;wipeingui
+/system_root     ext4     /dev/block/bootdevice/by-name/system                           flags=backup=1;wipeingui
 
 # System Partitions
 /system		 ext4     /dev/block/bootdevice/by-name/system                                                         flags=display="System";logical
